@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f2f3f8;
+  font-family: "Open Sans", sans-serif;
+  color: #575962;
+}
+
+:root {
+  --toastify-icon-color-success: #7bbd1e !important;
+  --toastify-color-progress-success: #7bbd1e !important;
+}
+
+h2.mantine-Modal-title {
+  @apply text-2xl font-semibold;
+}
