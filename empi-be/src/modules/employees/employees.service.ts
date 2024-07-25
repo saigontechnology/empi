@@ -29,8 +29,6 @@ export class EmployeesService {
       }),
     );
 
-    return {
-      message: 'success',
-    };
+    return results;
   }
 }
