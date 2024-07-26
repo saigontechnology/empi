@@ -15,9 +15,11 @@ export class EmployeesService {
     const results = await Promise.all(
       employees.map((emp) => {
         const url = `${process.env.HOST}${API.GET_SKILLS_N_DOMAIN}/${emp.id}`;
+        console.log('API: ', url);
         firstValueFrom(
           this.httpService.get(url).pipe(
             map((response: any) => {
+              console.log('employee:', response);
               return {
                 empCode: emp.empCode,
                 id: emp.id,
