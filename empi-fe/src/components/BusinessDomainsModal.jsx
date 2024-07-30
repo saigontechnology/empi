@@ -17,7 +17,7 @@ const businessDomains = listBusinessDomain.map((item) => {
 });
 
 const BusinessDomainsModal = (props) => {
-  const { opened, close, employeeId, existedDomainList } = props;
+  const { opened, close, employeeId, existedDomainList, onClose } = props;
   const [isCalling, setCalling] = useState(false);
 
   const domainList = useMemo(() => {
@@ -45,12 +45,14 @@ const BusinessDomainsModal = (props) => {
   const handleSaveAndClose = (data) => {
     handleAddDomain(data);
     close();
+    onClose();
     resetForm();
   };
 
   const handleCancel = (e) => {
     e.preventDefault();
     close();
+    onClose();
     resetForm();
   };
 

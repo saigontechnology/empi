@@ -242,6 +242,7 @@ export default function Home() {
         employeeId={employeeId}
         existedSkillList={existedSkillList}
         onChange={getEmployeeList}
+        onClose={getEmployeeList}
       />
       <BusinessDomainsModal
         opened={openedDomain}
@@ -249,6 +250,7 @@ export default function Home() {
         employeeId={employeeId}
         existedDomainList={existedDomainList}
         onChange={getEmployeeList}
+        onClose={getEmployeeList}
       />
       <DeleteModal
         opened={openedDelete}

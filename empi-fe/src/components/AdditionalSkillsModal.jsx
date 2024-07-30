@@ -28,7 +28,7 @@ const proficiencyList = listProficiencySkillType.map((item) => {
 });
 
 const AdditionalSkillsModal = (props) => {
-  const { opened, close, employeeId, existedSkillList } = props;
+  const { opened, close, employeeId, existedSkillList, onClose } = props;
   const [isCalling, setCalling] = useState(false);
 
   const skillList = useMemo(() => {
@@ -57,12 +57,14 @@ const AdditionalSkillsModal = (props) => {
   const handleSaveAndClose = (data) => {
     handleAddSkill(data);
     close();
+    onClose();
     resetForm();
   };
 
   const handleCancel = (e) => {
     e.preventDefault();
     close();
+    onClose();
     resetForm();
   };
 
